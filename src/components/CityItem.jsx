@@ -1,4 +1,4 @@
-function CityItem({ city }) {
+function CityItem() {
   return <li>LIST</li>;
 }
 
