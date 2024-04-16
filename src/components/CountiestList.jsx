@@ -1,13 +1,11 @@
 /*global cities, isLoading*/
 
-/*eslint no-undef: "error"*/
-
 import Spinner from "./Spinner";
-import styles from "./CityList.module.css";
+import styles from "./CountriesList.module.css";
 import CityItem from "./CityItem";
 import Message from "./Message";
 
-function CityList() {
+function CountriesList() {
   if (isLoading) return <Spinner />;
 
   if (!cities.length)
@@ -15,7 +13,7 @@ function CityList() {
       <Message message="Add your first city by clicking on a city on the map" />
     );
   return (
-    <ul className={styles.cityList}>
+    <ul className={styles.countriesList}>
       {cities.map((city) => (
         <CityItem city={city} key={city.id} />
       ))}
@@ -23,4 +21,4 @@ function CityList() {
   );
 }
 
-export default CityList;
+export default CountriesList;
